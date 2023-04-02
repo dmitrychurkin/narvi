@@ -1,0 +1,17 @@
+{
+    "form": {
+        "heading1": "Enter personal details.",
+        "heading2": "How much would you like to transfer?",
+        "heading3": "Input the receiving IBAN.",
+        "heading4": "Select Payment Method:",
+        "action": "Proceed",
+        "formElements": {
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Email",
+            "phone": "Phone Number (Optional)",
+            "amount": "Enter Amount",
+            "iban": "IBAN"
+        }
+    }
+}
