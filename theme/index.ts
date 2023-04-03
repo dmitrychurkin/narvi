@@ -26,9 +26,34 @@ const theme = extendTheme({
         MuiTextField: {
             defaultProps: {
                 variant: 'filled',
+                size: 'small',
                 InputProps: {
                     disableUnderline: true
                 }
+            },
+            styleOverrides: {
+                root: ({ theme }) =>
+                    theme.unstable_sx({
+                        '& .MuiInputLabel-root': {
+                            fontWeight: 300,
+                            fontSize: '1rem',
+                            color: 'var(--macro-input-placeholder-color)'
+                        },
+                        '& .MuiInputBase-root': {
+                            borderWidth: 1,
+                            borderStyle: 'solid',
+                            borderColor: 'var(--macro-input-border-color)',
+                            borderRadius: '0.5rem',
+                            backgroundColor: theme.vars.palette.common.white,
+                            '&.Mui-focused': {
+                                backgroundColor: theme.vars.palette.common.white
+                            },
+                            ':hover': {
+                                backgroundColor: theme.vars.palette.common.white,
+                                borderColor: 'var(--macro-input-border-color-hover)'
+                            }
+                        }
+                    })
             }
         },
         MuiCssBaseline: {
@@ -51,6 +76,10 @@ const theme = extendTheme({
                     --macro-font-weight-labelled-group: 500;
                     --macro-line-height-labelled-group: 24 / 20;
                     --macro-color-labelled-group: var(--macro-blue-dark);
+
+                    --macro-input-placeholder-color: #8C8BB9;
+                    --macro-input-border-color: rgb(206, 213, 227);
+                    --macro-input-border-color-hover: rgb(112, 133, 174);
                 }
                 a {
                     text-decoration: none;

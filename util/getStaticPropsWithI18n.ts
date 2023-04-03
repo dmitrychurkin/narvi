@@ -11,10 +11,10 @@ type GetStaticPropsWithI18nArg = {
 };
 
 export default function getStaticPropsWithI18n({
+    extraLocales,
     initialLocale = Locale.EN,
     namespacesRequired = [],
-    configOverride = null,
-    extraLocales
+    configOverride = null
 }: GetStaticPropsWithI18nArg = {}) {
     const getDefaultStaticProps: GetStaticProps = async ({
         locale,

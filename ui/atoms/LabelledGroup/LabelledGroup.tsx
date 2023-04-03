@@ -1,12 +1,15 @@
-import Box from "@mui/material/Box";
+import Box, { BoxProps } from "@mui/material/Box";
 import { PropsWithChildren, ReactNode, memo } from "react";
 
 type Props = {
     readonly label: ReactNode;
+    readonly sx?: BoxProps['sx'];
 };
 
-const LabelledGroup = ({ children, label }: PropsWithChildren<Props>) => (
-    <Box>
+const LabelledGroup = ({ children, label, sx }: PropsWithChildren<Props>) => (
+    <Box
+        sx={sx}
+    >
         <Box
             sx={{
                 fontSize: 'var(--macro-font-size-labelled-group)',
